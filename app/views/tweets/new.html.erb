@@ -1,5 +1,30 @@
-<h1>New Tweet</h1>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <%= render "trends" %>
+      <div class="column is-half">
+        <article class="media box">
+          <figure class="media-left">
+            <p class="image is-64x64">
+              <img src="https://bulma.io/images/placeholders/64x64.png" alt="">
+            </p>
+          </figure>
+          <div class="media-content">
+            <%= render 'tweets/form' %>
+            <div class="temp">
+              <%= link_to 'Home', tweets_path, class: 'button', style: 'background-color:grey;color: white;' %>
+            </div>
+          </div>
+        </article>
+      </div>
+      <%= render "who-to-follow" %>
+    </div>
+  </div>
+</section>
 
-<%= render 'form', tweet: @tweet %>
 
-<%= link_to 'Back', tweets_path %>
+<style media="screen">
+  .temp{
+    padding-top: 5px;
+  }
+</style>
